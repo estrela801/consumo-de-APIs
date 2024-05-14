@@ -22,10 +22,27 @@ NPX -> Node Package eXecuter (Executor de pacote do Node)
 
 **Instalação JSON-SERVER**: É uma simulação de interações com API para desenvolvimentos iniciais no front-end.
 Para isso precisamos utulizar dados do repositório <https://github.com/typicode/json-server>, neste repositorio você pode escolher o json ou json5.
-Para utilizarmos, crie um arquivo com a extensão escolhida no repositório e  executa-lo na maquina, para isso usamos o código 
+Para utilizarmos, crie um arquivo com a extensão escolhida no repositório e  executa-lo na maquina, para isso usamos o código.
 
 ~~~bash
 npx json-server (nomeDoArquivo.ExtensãoEscolhida)
+~~~
+
+
+**Gitignore**: É um arquivo destinado para escolher outros arquivos para o git não versionar.
+Você precisará apenas digitar barra "/" e o nome do arquivo.
+
+
+**Arquivo Package Json**: É um arquivo que engloba metadados, scripts de automatizações, e configurações de ambiente. 
+
+
+**Automatização do servidor** : Para automatizar a abertura do servidor você previsar adicionar o seguinte código:
+
+~~~bash
+"scripts": {
+    "start": "npx json-server data/db.json"
+  }
+}
 ~~~
 
 
