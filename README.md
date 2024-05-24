@@ -69,3 +69,27 @@ O chocoatey é uma ferramenta que facilita o gerenciamento desoftwares no sistem
 Ele funciona com a execução de scripts automatizados prontos para fazer o que quisermos, assim criando um grande grau de facilidade na instalação de ferramentas. Adiantando todo um processo tedioso e demorado.
 Com sua facilidade de instalação, podemos instalar diversos softwares de uma só vez,  agendar atualizações automáticas de software e gerenciar dependências de pacotes de forma inteligente.
 Para mais informações consulte: <https://github.com/chocolatey/ChocolateyGUI>
+
+
+## REQUISIÇÂO
+
+Para criar uma nova requisição, podemos utilizar a função fetch API.
+
+~~~js
+const requisicao = new Request("http://localhost:3000/produtos", {
+  method: "GET",
+  headers: {
+    "content-type": "application/json", //busca as informações dos produtos
+  },
+});
+~~~
+
+Utilizamos `new Request()` para __instanciar__ a interface `Request()`
+na variável `requisição`, de forma que ela se torna um objeto com os métodos exigidos por essa interface.
+
+A requisiçãp é constituida por duas partes: uma URL e um objeto JSON
+contendo as opções da requisição.
+ - **URL**: é o endereço do recurso que você deseja acessar 
+ - **Objeto JSON**: é um objeto que contém as opções da requisição, como o método HTTP (GET, POST, PUT,DELETE, etc.), headers, corpo da requisição, etc.
+
+ 
