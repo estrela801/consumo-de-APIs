@@ -1,28 +1,29 @@
-const requisicao = new Request("http://localhost:3000/produtos", {
+const reqGet = new Request("http://localhost:3000/produtos", {
   method: "GET",
   headers: {
     "content-type": "application/json", //busca as informações dos produtos
   },
 });
-fetch = fetch(requisicao)
+fetch = fetch(reqGet)
   .then((batata) => batata.json())
   .then((batata) => {
     const div = document.createElement("div");
     batata.forEach((i) => {
 
 
-      const pDescricao = document.createElement("p");
-      pDescricao.innerHTML = i.descricao;
+      const liDescricao = document.createElement("li");
+      liDescricao.innerHTML = i.descricao;
      
-      const pId = document.createElement("p");
-      pId.innerHTML = i.id;
+      const liId = document.createElement("li");
+      liId.innerHTML = i.id;
      
-      const pPreco = document.createElement("p");
-      pPreco.innerHTML = i.preco;
+      const liPreco = document.createElement("li");
+      liPreco.innerHTML = i.preco.toFixed(2);
      
-      div.append(pDescricao, pId, pPreco)
+      div.append(liDescricao, liId, liPreco)
     });
 
     document.body.appendChild(div)
 
   });
+

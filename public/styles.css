@@ -1,0 +1,5 @@
+body{
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+}
